@@ -27,3 +27,7 @@ ABI = output.contracts["demo.sol"]["Demo"].abi;
 bytecode = output.contracts["demo.sol"]["Demo"].evm.bytecode.object
 console.log("ABI:", ABI);
 console.log("Bytecode :", bytecode);
+contract = new web3.eth.Contract(ABI)
+web3.eth.getAccounts().then(accounts => {
+    console.log("Accounts :", accounts)
+})
